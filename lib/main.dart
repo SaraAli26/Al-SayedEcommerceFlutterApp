@@ -200,6 +200,151 @@ class _LoginState extends State<Login> {
 }
 
 
+
+/*class Signup extends StatefulWidget {
+  Signup ({Key key, this.title}) : super(key: key);
+
+  // This widget is the home page of your application. It is stateful, meaning
+  // that it has a State object (defined below) that contains fields that affect
+  // how it looks.
+
+  // This class is the configuration for the state. It holds the values (in this
+  // case the title) provided by the parent (in this case the App widget) and
+  // used by the build method of the State. Fields in a Widget subclass are
+  // always marked "final".
+
+  final String title;
+
+  @override
+  _LoginState createState() => _LoginState();
+}
+
+class _SignupState extends State<Signup> {
+  final _formKey = GlobalKey<FormState>();
+  TextEditingController username = new TextEditingController();
+  TextEditingController password = new TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    // This method is rerun every time setState is called, for instance as done
+    // by the _incrementCounter method above.
+    //
+    // The Flutter framework has been optimized to make rerunning build methods
+    // fast, so that you can just rebuild anything that needs updating rather
+    // than having to individually change instances of widgets.
+    return Scaffold(
+        backgroundColor: Color(0xFF0277BD),
+
+        body: SingleChildScrollView(
+          child: Container(
+            child: Form(
+              key: _formKey,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+
+                  SizedBox(height: 130.0,),
+                  Container(
+                    margin: EdgeInsets.all(20),
+                    decoration: new BoxDecoration(
+                      color: Colors.white,
+
+                      borderRadius: new BorderRadius.only(
+                        topLeft: new Radius.circular(20.0),
+                        bottomLeft: new Radius.circular(20.0),
+                        topRight: new Radius.circular(20.0),
+                        bottomRight: new Radius.circular(20.0),
+                      ),
+                    ),
+
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20.0,5.0, 20.0,5.0),
+                          child: Image(
+                            image: AssetImage('assets/logo.jpg'),
+
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20.0,5.0, 20.0,5.0),
+
+                          child: TextFormField(
+
+                            controller: username,
+                            keyboardType: TextInputType.text,
+                            decoration: InputDecoration(
+                              // border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+                              labelText: "User Name",
+                              contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 20),
+                              filled: true,
+                              //  hintText: "Name",
+                              //   icon: Icon(Icons.person),
+                            ),
+                            validator: (value){
+                              if(value.isEmpty){
+                                return"Fill Feild";
+                              }
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 30,),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20.0,5.0, 20.0,5.0),
+
+                          child: TextFormField(
+                            controller: password,
+                            keyboardType: TextInputType.text,
+                            obscureText: true,
+
+                            decoration: InputDecoration(
+                              //   border: OutlineInputBorder(borderRadius: BorderRadius.circular(50)),
+                              labelText: "Password",
+
+                              contentPadding: EdgeInsets.fromLTRB(20, 15, 20, 20),
+                              filled: true,
+                              //     hintText: "Pass",
+                              // icon: Icon(Icons.lock),
+                            ),
+                            validator: (value){
+                              if(value.isEmpty){
+                                return"Fill Feild";
+                              }
+
+                            },
+                          ),
+                        ),
+                        SizedBox(height: 30,),
+                        RaisedButton(
+                          child: Text ("Login"),
+                          color: Colors.blue,
+                          shape: StadiumBorder(),
+                          onPressed: (){
+                            if(_formKey.currentState.validate()){
+                              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context)=> MyHomePage(username: username.text, password: password.text,)));
+                            }
+                          },
+                        ),
+                        SizedBox(height: 5,),
+                      ],
+                    ),
+                  ),
+
+                ],
+              ),
+            ),
+
+
+          ),
+        )
+    );
+  }
+}*/
+
+
 class MyHomePage extends StatefulWidget {
  MyHomePage({Key key, this.username, this.password}) : super(key: key);
 
